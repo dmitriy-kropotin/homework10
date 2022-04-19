@@ -52,3 +52,11 @@ end
 
 ![Снимок экрана 2022-04-16 в 18 33 56](https://user-images.githubusercontent.com/98701086/163986221-a4c99d8e-3be0-4ffc-af0d-1402e1b7fc20.png)
 
+14. Теперь попробую переименовать VG. Текущее состояние `vgs`
+
+```
+[root@homework10 ~]# vgs
+  VG        #PV #LV #SN Attr   VSize    VFree
+  rl_rocky8   1   2   0 wz--n- <127.00g <54.94g
+  ```
+15. 
