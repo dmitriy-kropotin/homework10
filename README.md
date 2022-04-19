@@ -91,4 +91,15 @@ if [ -z "${kernelopts}" ]; then
 fi
 ```
 
-19. 
+19. Пересоздаю /boot/initramfs `mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)`
+
+```
+[root@homework10 ~]# mkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -r)
+Creating: target|kernel|dracut args|basicmodules
+dracut: Executing: /usr/bin/dracut -v -f /boot/initramfs-4.18.0-348.20.1.el8_5.x86_64.img 4.18.0-348.20.1.el8_5.x86_64
+...
+dracut: *** Stripping files ***
+dracut: *** Stripping files done ***
+dracut: *** Creating image file '/boot/initramfs-4.18.0-348.20.1.el8_5.x86_64.img' ***
+dracut: *** Creating initramfs image file '/boot/initramfs-4.18.0-348.20.1.el8_5.x86_64.img' done ***
+```
