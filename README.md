@@ -151,6 +151,60 @@ drwxr-xr-x.  2 root root   44 Apr 19 13:24 .
 drwxr-xr-x. 74 root root 4096 Apr 19 13:18 ..
 -rw-r--r--.  1 root root  126 Apr 19 13:24 module-setup.sh
 -rw-r--r--.  1 root root  333 Apr 19 13:24 test.sh
-[root@homework10 01tesla]#
+[root@homework10 01tesla]# cat module-setup.sh test.sh
+#!/bin/bash
+
+check() {
+    return 0
+}
+
+depends() {
+    return 0
+}
+
+install() {
+    inst_hook cleanup 00 "${moddir}/test.sh"
+}
+#!/bin/bash
+
+exec 0<>/dev/console 1<>/dev/console 2<>/dev/console
+cat <<'msgend'
+Hello! You are in dracut module!
+ ___________________
+< I'm dracut module >
+ -------------------
+   \
+    \
+        .--.
+       |o_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+msgend
+sleep 10
+echo " continuing...."
+
 ```
+
+26. Пересобираю initrd 
+
+```
+[root@homework10 01tesla]# dracut -f -v
+```
+27. Проверяю наличие модуля
+
+```
+[root@homework10 01tesla]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep tesla
+tesla
+```
+
+28. Перезагружаюсь, и временно отключаю "тихую" загрузку
+
+![VirtualBox_homework10_default_1650371690196_51831_19_04_2022_16_51_49](https://user-images.githubusercontent.com/98701086/164020108-2c334614-51fb-4e70-910c-23cb5f3cefa1.png)
+
+29. Ура! Модуль сработал!
+
+![VirtualBox_homework10_default_1650371690196_51831_19_04_2022_16_52_04](https://user-images.githubusercontent.com/98701086/164019918-87652575-7dde-4b6a-bc24-d0a4df38625c.png)
 
