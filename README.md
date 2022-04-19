@@ -27,3 +27,8 @@ end
 
 ![image](https://user-images.githubusercontent.com/98701086/163937982-9aae4244-3bad-420b-b579-03e7b3d05705.png)
 
+7. Теперь добавляю параметры загрузки ` rd.break
+
+![Снимок экрана 2022-04-16 в 18 22 32](https://user-images.githubusercontent.com/98701086/163938131-6408a7b5-91e3-43bf-a46d-8d477f29bd84.png)
+
+8. 
