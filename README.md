@@ -103,3 +103,36 @@ dracut: *** Stripping files done ***
 dracut: *** Creating image file '/boot/initramfs-4.18.0-348.20.1.el8_5.x86_64.img' ***
 dracut: *** Creating initramfs image file '/boot/initramfs-4.18.0-348.20.1.el8_5.x86_64.img' done ***
 ```
+20. ...и система не загрузилась, перешла в emergency mode. Перезагружаюсь, и вижу, что параметры запуска не изменились...
+21. Редактирую параметр запуска ядра вручную, запускаю систему. Делаю `ls -la /boot/grub2/`
+
+```
+[root@homework10 ~]# ls -la /boot/grub2/
+total 32
+drwx------. 4 root root   83 Apr 19 13:09 .
+dr-xr-xr-x. 5 root root 4096 Mar 22 19:58 ..
+-rw-r--r--. 1 root root   64 Apr 19 13:07 device.map
+drwxr-xr-x. 2 root root   25 Mar 22 19:44 fonts
+-rw-r--r--. 1 root root 6654 Apr 19 13:07 grub.cfg
+-rw-------. 1 root root 1025 Apr 19 13:09 grubenv
+drwxr-xr-x. 2 root root 8192 Mar 22 19:44 i386-pc
+```
+
+22. Смотрю содеримое grubenv, в нем старое название VG, редактирую `vim /boot/grub2/grubenv` 
+
+```
+# GRUB Environment Block
+saved_entry=6212f99182784886ad1fb8010eb3543e-4.18.0-348.20.1.el8_5.x86_64
+kernelopts=root=/dev/mapper/OTUS_ROOT-root ro no_timer_check crashkernel=auto resume=/dev/mapper/OTUS_ROOT-swap rd.lvm.lv=OTUS_ROOT/root rd.lvm.lv=OTUS_ROOT/swap biosdevname=0 net.ifnames=0 rhgb quiet
+boot_success=1
+boot_indeterminate=0
+#####################
+```
+23. Перезагружаюсь, система загрузилась! 
+
+```
+[root@homework10 ~]# vgs
+  VG        #PV #LV #SN Attr   VSize    VFree
+  OTUS_ROOT   1   2   0 wz--n- <127.00g <54.94g
+```
+24
