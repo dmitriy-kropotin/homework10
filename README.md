@@ -73,6 +73,8 @@ end
 
 ```
 /dev/mapper/OTUS_ROOT-root /                       xfs     defaults        0 0
+UUID=27614e01-943c-47ba-a6e7-06c4ce2ded26 /boot                   xfs     defaults        0 0
+/dev/mapper/OTUS_ROOT-swap none                    swap    defaults        0 0
 ```
 
 17. Редактирую файл настроек GRUB `vim /etc/default/grub`
@@ -80,3 +82,13 @@ end
 ```
 GRUB_CMDLINE_LINUX="no_timer_check crashkernel=auto resume=/dev/mapper/rl_rocky8-swap rd.lvm.lv=OTUS_ROOT/root rd.lvm.lv=rl_rocky8/swap biosdevname=0 net.ifnames=0 rhgb quiet"
 ```
+
+18. Редактирую файл текущей конфигурации GRUB `vim /boot/grub2/grub.cfg`
+
+```
+if [ -z "${kernelopts}" ]; then
+  set kernelopts="root=/dev/mapper/OTUS_ROOT-root ro no_timer_check crashkernel=auto resume=/dev/mapper/OTUS_ROOT-swap rd.lvm.lv=OTUS_ROOT/root rd.lvm.lv=OTUS_ROOT/swap biosdevname=0 net.ifnames=0 rhgb quiet "
+fi
+```
+
+19. 
