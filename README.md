@@ -19,7 +19,7 @@ end
 
 ![Снимок экрана 2022-04-16 в 18 16 55](https://user-images.githubusercontent.com/98701086/163937520-6f2b350d-aa85-4aa3-a8e9-0cfa9b237766.png)
 
-5. Все монтирования на месте. Пробую создать файл и вижу, что файловая система в режиме RO. 
+5. Все монтирования на месте. Пробую создать файл и вижу, что файловая система в режиме `ro`. 
 
 ![image](https://user-images.githubusercontent.com/98701086/163937733-884f0621-c780-4049-aeac-5643a9f49708.png)
 
@@ -44,3 +44,11 @@ end
 ![image](https://user-images.githubusercontent.com/98701086/163942347-e95cb83f-9ed9-4789-af99-fd2ada960d56.png)
 
 11. Все успешно. (файл /.autorelabel нужен, что бы SElinux перемаркировал всю файловую систему, зачем это ? )
+12. Теперь пробую вариант добавить опцию `init=/sysroot/bin/sh` и поменять режим монтирования root с `ro` на `rw`
+
+![Снимок экрана 2022-04-16 в 18 32 19](https://user-images.githubusercontent.com/98701086/163985909-832b97ac-49cc-4c24-8d75-c72b952b2b09.png)
+
+13. Загрузился в emergency mode, и режим монтирования сразу `rw`
+
+![Снимок экрана 2022-04-16 в 18 33 56](https://user-images.githubusercontent.com/98701086/163986221-a4c99d8e-3be0-4ffc-af0d-1402e1b7fc20.png)
+
