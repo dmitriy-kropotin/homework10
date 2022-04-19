@@ -16,3 +16,9 @@ end
 ![Снимок экрана 2022-04-16 в 18 14 23](https://user-images.githubusercontent.com/98701086/163683481-96bb73d5-2faf-46bb-b592-8924077e5409.png)
 
 4. Смотрю, что есть через `df -h`, 
+
+![Снимок экрана 2022-04-16 в 18 16 55](https://user-images.githubusercontent.com/98701086/163937520-6f2b350d-aa85-4aa3-a8e9-0cfa9b237766.png)
+
+5. Все монтирования на месте. Пробую создать файл и вижу, что файловая система в режиме RO. 
+
+![image](https://user-images.githubusercontent.com/98701086/163937733-884f0621-c780-4049-aeac-5643a9f49708.png)
