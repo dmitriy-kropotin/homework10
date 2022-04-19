@@ -35,4 +35,12 @@ end
 
 ![Снимок экрана 2022-04-16 в 18 23 56](https://user-images.githubusercontent.com/98701086/163938399-3142754b-2a22-4797-ac61-e62d167bf543.png)
 
-9. 
+9. Проверяю монтирования, вижу что все на месте, вижу что корень системы смотрирован в /sysroot
+
+![image](https://user-images.githubusercontent.com/98701086/163942013-8f1993b4-5677-4620-90fd-256110c7ff8b.png)
+
+10. Меняю root в корень системы, и пробую сменить пароль на root
+
+![image](https://user-images.githubusercontent.com/98701086/163942347-e95cb83f-9ed9-4789-af99-fd2ada960d56.png)
+
+11. Все успешно. (файл /.autorelabel нужен, что бы SElinux перемаркировал всю файловую систему, зачем это ? )
