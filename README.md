@@ -135,4 +135,22 @@ boot_indeterminate=0
   VG        #PV #LV #SN Attr   VSize    VFree
   OTUS_ROOT   1   2   0 wz--n- <127.00g <54.94g
 ```
-24
+24. Теперь добавляю свой модуль загрузки. Создаю папку для модуля, и качаю файлы модуля
+
+```
+[root@homework10 ~]# mkdir /usr/lib/dracut/modules.d/01tesla
+[root@homework10 ~]# cd /usr/lib/dracut/modules.d/01tesla
+
+```
+25. Создаю файлы модуля и копирую в них содержимое
+
+```
+[root@homework10 01tesla]# ls -la
+total 12
+drwxr-xr-x.  2 root root   44 Apr 19 13:24 .
+drwxr-xr-x. 74 root root 4096 Apr 19 13:18 ..
+-rw-r--r--.  1 root root  126 Apr 19 13:24 module-setup.sh
+-rw-r--r--.  1 root root  333 Apr 19 13:24 test.sh
+[root@homework10 01tesla]#
+```
+
