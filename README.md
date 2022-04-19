@@ -69,4 +69,14 @@ end
   OTUS_ROOT   1   2   0 wz--n- <127.00g <54.94g
 ```
 
-16. 
+16. Редактирую fstab `vim /etc/fstab`
+
+```
+/dev/mapper/OTUS_ROOT-root /                       xfs     defaults        0 0
+```
+
+17. Редактирую файл настроек GRUB `vim /etc/default/grub`
+
+```
+GRUB_CMDLINE_LINUX="no_timer_check crashkernel=auto resume=/dev/mapper/rl_rocky8-swap rd.lvm.lv=OTUS_ROOT/root rd.lvm.lv=rl_rocky8/swap biosdevname=0 net.ifnames=0 rhgb quiet"
+```
