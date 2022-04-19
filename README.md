@@ -59,4 +59,14 @@ end
   VG        #PV #LV #SN Attr   VSize    VFree
   rl_rocky8   1   2   0 wz--n- <127.00g <54.94g
   ```
-15. 
+15. Переименовываю `vgrename rl_rocky8 OTUS_ROOT`
+
+```
+[root@homework10 ~]# vgrename rl_rocky8 OTUS_ROOT
+  Volume group "rl_rocky8" successfully renamed to "OTUS_ROOT"
+[root@homework10 ~]# vgs
+  VG        #PV #LV #SN Attr   VSize    VFree
+  OTUS_ROOT   1   2   0 wz--n- <127.00g <54.94g
+```
+
+16. 
