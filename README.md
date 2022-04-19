@@ -29,6 +29,10 @@ end
 
 7. Теперь добавляю параметры загрузки ` rd.break
 
-![Снимок экрана 2022-04-16 в 18 22 32](https://user-images.githubusercontent.com/98701086/163938131-6408a7b5-91e3-43bf-a46d-8d477f29bd84.png)
+![image](https://user-images.githubusercontent.com/98701086/163938291-e1e4b2ca-19ef-4ec6-bdd1-accb51a3d2d9.png)
 
-8. 
+8. Нажимаю Control+X, попадаю в emergency mode
+
+![Снимок экрана 2022-04-16 в 18 23 56](https://user-images.githubusercontent.com/98701086/163938399-3142754b-2a22-4797-ac61-e62d167bf543.png)
+
+9. 
